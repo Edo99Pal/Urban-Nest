@@ -1,0 +1,160 @@
+@import 'src/scss/main';
+
+.event {
+    width: 80vw;
+    height: 50vh;
+    margin: 0 2.5em;
+    padding: 0 2em;
+    position: relative;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .25);
+    background-blend-mode: darken;
+    transition: all .3s;
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, .50);
+        background-blend-mode: lighten;
+        > * {
+            color: black;
+            text-shadow: .5px 0 black;
+        }
+        mat-icon {
+            color: black;
+        }
+    }
+    h2 {
+        width: 80%;
+        padding: 1em;
+        transition: all .3s;
+    }
+    #date {
+        mat-icon {
+            position: relative;
+            top: 5px;
+        }
+    }
+}
+
+.event-1 {
+    background-image: url('../../../../../assets/activities/activity-1.jpg');
+}
+.event-2 {
+    background-image: url('../../../../../assets/activities/activity-2.jpg');
+}
+.event-3 {
+    background-image: url('../../../../../assets/activities/activity-3.jpg');
+}
+.event-4 {
+    background-image: url('../../../../../assets/activities/event-berlin-1.jpg');
+}
+.event-5 {
+    background-image: url('../../../../../assets/activities/event-berlin-2.jpg');
+}
+.event-6 {
+    background-image: url('../../../../../assets/activities/event-berlin-3.jpg');
+}
+.event-7 {
+    background-image: url('../../../../../assets/activities/activity-4.jpg');
+}
+.event-8 {
+    background-image: url('../../../../../assets/activities/activity-5.jpg');
+}
+.event-9 {
+    background-image: url('../../../../../assets/activities/activity-6.jpg');
+}
+.event-10 {
+    background-image: url('../../../../../assets/activities/event-prague-1.jpg');
+}
+.event-11 {
+    background-image: url('../../../../../assets/activities/event-prague-2.jpg');
+}
+.event-12 {
+    background-image: url('../../../../../assets/activities/event-prague-3.jpg');
+}
+.event-13 {
+    background-image: url('../../../../../assets/activities/activity-7.jpg');
+}
+.event-14 {
+    background-image: url('../../../../../assets/activities/activity-8.jpg');
+}
+.event-15 {
+    background-image: url('../../../../../assets/activities/activity-9.jpg');
+}
+.event-16 {
+    background-image: url('../../../../../assets/activities/event-vienna-1.jpg');
+}
+.event-17 {
+    background-image: url('../../../../../assets/activities/event-vienna-2.jpg');
+}
+.event-18 {
+    background-image: url('../../../../../assets/activities/event-vienna-3.jpg');
+}
+.event-19 {
+    background-image: url('../../../../../assets/activities/activity-10.jpg');
+}
+.event-20 {
+    background-image: url('../../../../../assets/activities/activity-11.jpg');
+}
+.event-21 {
+    background-image: url('../../../../../assets/activities/activity-12.jpg');
+}
+.event-22 {
+    background-image: url('../../../../../assets/activities/event-budapest-1.jpg');
+}
+.event-23 {
+    background-image: url('../../../../../assets/activities/event-budapest-2.jpg');
+}
+.event-24 {
+    background-image: url('../../../../../assets/activities/event-budapest-3.jpg');
+}
+
+
+.small {
+    width: 400px;
+    height: 300px;
+    margin: 0;
+    h2 {
+        width: 100%;
+    }
+
+    #title {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+    }
+    
+    #location {
+        position: absolute;
+        bottom: -.2em;
+        left: 1em;
+    }
+
+    #date {
+        position: absolute;
+        bottom: 1em;
+        right: 1em;
+    }
+}
+
+@media(max-width: 700px) {
+    .event {
+        width: 75vw;
+        margin: 2em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .small {
+        #title {
+            left: 0;
+        }
+        #location {
+            bottom: 1.5em;
+            left: 0;
+        }
+
+        #date {
+            left: 1em;
+        }
+    }
+}

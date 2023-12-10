@@ -1,0 +1,22 @@
+<div class="container" #homepage>
+    <div class="content flex-container flex-column flex-align-center flex-justify-center color-white text-center">
+        <div class="header" id="header">
+            <h1>Urban Nest</h1>
+            <em class="color-white">Roam, Rest, Connect: Your Home Away from Home!</em>
+            <div class="menu">
+                <ul class="flex-container flex-justify-space-between p-3">
+                    <a *ngFor="let el of menuItems" class="color-white" href="#{{el.toLowerCase().replace(' ', '')}}"><li class="color-white p-3">{{ el }}</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <app-locations-home id="locations" #locations/>
+    <app-booking-home id="booking" #booking/>
+    <app-activities-home id="activities" #activities/>
+    <app-accommodation-home id="accommodation" #accommodation/>
+    <app-facilities-home id="facilities" #facilities/>
+    <app-special-offers-home id="specialoffers" #specialoffers/>
+    <app-reviews-home id="reviews" #reviews/>
+    <app-faq-home id="faq" #faq/>
+    <app-contact-us-home id="contactus" #contactus/>
+</div>

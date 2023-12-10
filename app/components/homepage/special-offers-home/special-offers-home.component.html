@@ -1,0 +1,8 @@
+<div class="container flex-container flex-justify-center flex-align-center color-white">
+    <h1 class="section-title">Special Offers</h1>
+    <div class="content flex-container flex-justify-center flex-align-center">
+        <app-carousel [items]="specialOffers" (indexChange)="onChange($event)">
+            <app-offer (click)="onPageChange(specialOffers.indexOf(offer) + 38)" *ngFor="let offer of specialOffers" [index]="specialOffers.indexOf(offer) + 1" [offer]="offer" class="offer" [ngClass]="[currentOfferIndex == specialOffers.indexOf(offer) + 1 ? 'active' : '', currentOfferIndex < specialOffers.indexOf(offer) + 1 ? 'right' : '', currentOfferIndex > specialOffers.indexOf(offer) + 1 ? 'left' : '']"/>
+        </app-carousel>    
+    </div>
+</div>

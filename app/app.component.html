@@ -1,0 +1,50 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <app-header (page)="onPageChange($event)"></app-header>
+  <app-homepage (page)="onPageChange(0)" [ngClass]="pageService.page.value == 0 ? 'active' : 'not-active'"/>
+  <app-locations (page)="onPageChange(1)" [ngClass]="pageService.page.value == 1 ? 'active' : 'not-active'"/>
+  <app-booking (page)="onPageChange(2)" [ngClass]="pageService.page.value == 2 ? 'active' : 'not-active'"/>
+  <app-activities (page)="onPageChange(3)" [ngClass]="pageService.page.value == 3 ? 'active' : 'not-active'"/>
+  <app-accommodation (page)="onPageChange(4)" [ngClass]="pageService.page.value == 4 ? 'active' : 'not-active'"/>
+  <app-facilities (page)="onPageChange(5)" [ngClass]="pageService.page.value == 5 ? 'active' : 'not-active'"/>
+  <app-special-offers (page)="onPageChange(6)" [ngClass]="pageService.page.value == 6 ? 'active' : 'not-active'"/>
+  <app-reviews (page)="onPageChange(7)" [ngClass]="pageService.page.value == 7 ? 'active' : 'not-active'"/>
+  <app-faq (page)="onPageChange(8)" [ngClass]="pageService.page.value == 8 ? 'active' : 'not-active'"/>
+  <app-contact-us (page)="onPageChange(9)" [ngClass]="pageService.page.value == 9 ? 'active' : 'not-active'"/>
+  <app-location (page)="onPageChange(10)" [hostel]="locationsService.getHostels[0]" [ngClass]="pageService.page.value == 10 ? 'active' : 'not-active'"/>
+  <app-location (page)="onPageChange(11)" [hostel]="locationsService.getHostels[1]" [ngClass]="pageService.page.value == 11 ? 'active' : 'not-active'"/>
+  <app-location (page)="onPageChange(12)" [hostel]="locationsService.getHostels[2]" [ngClass]="pageService.page.value == 12 ? 'active' : 'not-active'"/>
+  <app-location (page)="onPageChange(13)" [hostel]="locationsService.getHostels[3]" [ngClass]="pageService.page.value == 13 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(14)" [activity]="activitiesService.getEvents[0]" [ngClass]="pageService.page.value == 14 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(15)" [activity]="activitiesService.getEvents[1]" [ngClass]="pageService.page.value == 15 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(16)" [activity]="activitiesService.getEvents[2]" [ngClass]="pageService.page.value == 16 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(17)" [activity]="activitiesService.getEvents[3]" [ngClass]="pageService.page.value == 17 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(18)" [activity]="activitiesService.getEvents[4]" [ngClass]="pageService.page.value == 18 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(19)" [activity]="activitiesService.getEvents[5]" [ngClass]="pageService.page.value == 19 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(20)" [activity]="activitiesService.getEvents[6]" [ngClass]="pageService.page.value == 20 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(21)" [activity]="activitiesService.getEvents[7]" [ngClass]="pageService.page.value == 21 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(22)" [activity]="activitiesService.getEvents[8]" [ngClass]="pageService.page.value == 22 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(23)" [activity]="activitiesService.getEvents[9]" [ngClass]="pageService.page.value == 23 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(24)" [activity]="activitiesService.getEvents[10]" [ngClass]="pageService.page.value == 24 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(25)" [activity]="activitiesService.getEvents[11]" [ngClass]="pageService.page.value == 25 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(26)" [activity]="activitiesService.getEvents[12]" [ngClass]="pageService.page.value == 26 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(27)" [activity]="activitiesService.getEvents[13]" [ngClass]="pageService.page.value == 27 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(28)" [activity]="activitiesService.getEvents[14]" [ngClass]="pageService.page.value == 28 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(29)" [activity]="activitiesService.getEvents[15]" [ngClass]="pageService.page.value == 29 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(30)" [activity]="activitiesService.getEvents[16]" [ngClass]="pageService.page.value == 30 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(31)" [activity]="activitiesService.getEvents[17]" [ngClass]="pageService.page.value == 31 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(32)" [activity]="activitiesService.getEvents[18]" [ngClass]="pageService.page.value == 32 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(33)" [activity]="activitiesService.getEvents[19]" [ngClass]="pageService.page.value == 33 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(34)" [activity]="activitiesService.getEvents[20]" [ngClass]="pageService.page.value == 34 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(35)" [activity]="activitiesService.getEvents[21]" [ngClass]="pageService.page.value == 35 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(36)" [activity]="activitiesService.getEvents[22]" [ngClass]="pageService.page.value == 36 ? 'active' : 'not-active'"/>
+  <app-activity-page (page)="onPageChange(37)" [activity]="activitiesService.getEvents[23]" [ngClass]="pageService.page.value == 37 ? 'active' : 'not-active'"/>
+  <app-offer-page (page)="onPageChange(38)" [offer]="specialOffersService.getSpecialOffers[0]" [ngClass]="pageService.page.value == 38 ? 'active' : 'not-active'"/>
+  <app-offer-page (page)="onPageChange(39)" [offer]="specialOffersService.getSpecialOffers[1]" [ngClass]="pageService.page.value == 39 ? 'active' : 'not-active'"/>
+  <app-offer-page (page)="onPageChange(40)" [offer]="specialOffersService.getSpecialOffers[2]" [ngClass]="pageService.page.value == 40 ? 'active' : 'not-active'"/>
+  <app-offer-page (page)="onPageChange(41)" [offer]="specialOffersService.getSpecialOffers[3]" [ngClass]="pageService.page.value == 41 ? 'active' : 'not-active'"/>
+</body>

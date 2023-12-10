@@ -1,0 +1,6 @@
+<div class="container flex-container flex-justify-center flex-align-center">
+    <h1 class="page-title">Special Offers</h1>
+    <div class="content flex-container flex-justify-center flex-align-center">
+        <app-offer *ngFor="let offer of offers" (click)="onPageChange(offers.indexOf(offer) + 38)" [offer]="offer" [index]="offers.indexOf(offer) + 1"/>
+    </div>
+</div>

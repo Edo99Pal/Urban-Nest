@@ -1,0 +1,36 @@
+<div class="container flex-container flex-justify-center flex-align-center color-white" [ngClass]="page ? 'bg-clear' : ''">
+    <h1 class="section-title" [ngClass]="page ? 'home-h1' : ''">Facilities</h1>
+    <div class="content flex-container flex-justify-space-between flex-align-center">
+        <div class="{{ titles[0].toLowerCase() }} facility flex-container flex-column">
+            <h2>{{ titles[0] }}</h2>
+            <div class="categories" *ngFor="let el of highlights">
+                <h3>{{ el.category }}</h3>
+                <div class="detail" *ngFor="let detail of el.details">
+                    <p>{{ detail.name }}</p>
+                    <mat-icon>{{ detail.icon }}</mat-icon>
+                </div>
+            </div>
+        </div>
+        <div class="{{ titles[1].toLowerCase() }} facility flex-container flex-column">
+            <h2>{{ titles[1] }}</h2>
+            <div class="categories" *ngFor="let el of socialSpacesActivities">
+                <h3>{{ el.category }}</h3>
+                <div class="detail" *ngFor="let detail of el.details">
+                    <p>{{ detail.name }}</p>
+                    <mat-icon>{{ detail.icon }}</mat-icon>
+                    <ng-container *ngIf="detail.icon == 'brightness_1'"><mat-icon class="pool-table-1">{{ detail.icon }}</mat-icon><mat-icon class="pool-table-2">{{ detail.icon }}</mat-icon></ng-container>
+                </div>
+            </div>
+        </div>
+        <div class="{{ titles[2].toLowerCase() }} facility">
+            <h2>{{ titles[2] }}</h2>
+            <div class="categories" *ngFor="let el of services">
+                <h3>{{ el.category }}</h3>
+                <div class="detail" *ngFor="let detail of el.details">
+                    <p>{{ detail.name }}</p>
+                    <mat-icon>{{ detail.icon }}</mat-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

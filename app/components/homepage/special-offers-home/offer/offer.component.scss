@@ -1,0 +1,59 @@
+@import 'src/scss/main';
+
+.offer {
+    width: 80vw;
+    height: 50vh;
+    margin: 0 2.5em;
+    padding: 0 2em;
+    position: relative;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .25);
+    background-blend-mode: darken;
+    transition: all .3s;
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, .50);
+        background-blend-mode: lighten;
+        > * {
+            color: black;
+            text-shadow: .5px 0 black;
+        }
+    }
+    h2 {
+        width: 80%;
+        padding: 1em;
+        transition: all .3s;
+    }
+    .description {
+        width: 60%;
+    }
+}
+
+.offer-1 {
+    background-image: url('../../../../../assets/offers/offer-1.jpg');
+}
+.offer-2 {
+    background-image: url('../../../../../assets/offers/offer-2.jpg');
+}
+.offer-3 {
+    background-image: url('../../../../../assets/offers/offer-3.jpg');
+}
+.offer-4 {
+    background-image: url('../../../../../assets/offers/offer-4.jpg');
+}
+
+@media(max-width: 700px) {
+    .offer {
+        width: 75vw;
+        margin: 2em;
+        left: 50%;
+        transform: translateX(-50%);
+        .description {
+            display: none;
+        }
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

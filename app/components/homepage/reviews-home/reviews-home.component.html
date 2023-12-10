@@ -1,0 +1,13 @@
+<div class="container flex-container flex-justify-center flex-align-center">
+    <h1 class="section-title color-white">Reviews</h1>
+    <div class="content flex-container flex-justify-center flex-align-center flex-column">
+        <ng-container *ngFor="let review of reviews">
+            <div class="review text-left" *ngIf="review.rating == 5">
+                <em class="color-white">"{{ review.review }}"</em>
+                <div class="rating">
+                    <mat-icon *ngFor="let star of rating[reviews.indexOf(review)]">star</mat-icon>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

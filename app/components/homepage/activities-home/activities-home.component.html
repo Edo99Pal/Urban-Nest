@@ -1,0 +1,8 @@
+<div class="container flex-container flex-align-center flex-justify-center color-white">
+    <h1 class="section-title">Activities</h1>
+    <div class="content flex-container flex-align-center flex-justify-center">
+        <app-carousel [items]="filteredActivities" (indexChange)="onChange($event)">+
+            <app-activity (click)="onPageChange(activities.indexOf(activity) + 14)" *ngFor="let activity of filteredActivities" [index]="activities.indexOf(activity) + 1" [activity]="activity" class="activity" [ngClass]="[currentActivityIndex == filteredActivities.indexOf(activity) + 1 ? 'active' : '', currentActivityIndex < filteredActivities.indexOf(activity) + 1 ? 'right' : '', currentActivityIndex > filteredActivities.indexOf(activity) + 1 ? 'left' : '']"/>
+        </app-carousel>    
+    </div>
+</div>

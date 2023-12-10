@@ -1,0 +1,131 @@
+@import 'src/scss/main.scss';
+
+.container {
+    padding: 20vh 0 10vh;
+    .content {
+        position: relative;
+        min-height: 60vh;
+        width: 80vw;
+        background-color: white;
+        padding: 2em;
+        .left, .right {
+            width: 45%;
+            h2 {
+                height: 2em;
+            }
+            &:first-child {
+                position: relative;
+            }
+            h1 {
+                display: inline-block;
+                background-clip: text;
+                color: transparent;
+            }
+            #berlin-h1 {
+                background-image: radial-gradient(circle at center, #000000 0%, #8b0000 33%, #ffce00 100%);
+            }
+              
+            #prague-h1 {
+                background-image: radial-gradient(circle at center, #D7141A 0%, #00205B 33%, #cccccc 100%);
+            }
+    
+            #vienna-h1 {
+                background-image: radial-gradient(circle at center, #FF0000 0%, #FFA500 33%, #cccccc 100%);
+            }
+              
+            #budapest-h1 {
+                background-image: radial-gradient(circle at center, #436A8E 0%, #FFC917 33%, #cccccc 100%);
+            }
+            .facilities {
+                h2 {
+                    margin-bottom: 0;
+                }
+                ul {
+                    li {
+                        list-style: none;
+                        align-self: flex-start;
+                    }
+                }
+            }
+            .rating {
+                position: absolute;
+                right: 3em;
+                bottom: 1em;
+                width: fit-content;
+                .stars {
+                    position: relative;
+                    p {
+                        position: relative;
+                        top: -.4em;
+                    }
+                }
+            }
+    
+            img {
+                width: 300px;
+                height: 150px;
+                object-fit: cover;
+                transition: all .3s;
+                margin: 1em;
+            }
+        }
+    }
+
+}
+
+.berlin {
+    background-image: url('../../../../assets/cities/berlin.jpg');
+}
+
+.prague {
+    background-image: url('../../../../assets/cities/prague.jpg');
+}
+
+.vienna {
+    background-image: url('../../../../assets/cities/vienna.jpg');
+}
+
+.budapest {
+    background-image: url('../../../../assets/cities/budapest.jpg');
+}
+
+
+@media(max-width: 700px) {
+    .container {
+        padding: 2em;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        .content {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 7em;
+            .left, .right {
+                width: 100%;
+                margin-bottom: 2em;
+            }
+            &:first-child {
+                border: none;
+            }
+            .rating {
+                position: relative;
+                right: 0;
+                .stars {
+                    position: absolute;
+                    width: 50vw;
+                    padding-bottom: 2em;
+                }
+            }
+            .images {
+                justify-content: center;
+            }
+            .right {
+                .facilities {
+                    h2 {
+                        margin-bottom: 3em;
+                    }
+                }
+            }
+        }
+    }
+}

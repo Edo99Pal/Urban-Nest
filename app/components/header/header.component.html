@@ -1,0 +1,18 @@
+<header class="flex-container flex-justify-space-between flex-align-center container">
+        <div class="logo" (click)="onPageChange(0)">
+            <h1 id="logo">Urban Nest</h1>
+        </div>
+        <div class="navbar">
+            <ul class="flex-container flex-justify-space-between">
+                <li class="m-3" *ngFor="let el of menuItems"  (click)="onPageChange(menuItems.indexOf(el) + 1)" [ngClass]="el == 'Booking' && bookingService.bookingNotNull() && !bookingService.showed ? 'booked' : ''" >{{ el }}</li>
+            </ul>
+        </div>
+        <div class="navbar-phone">
+            <mat-icon (click)="openMenu(); animation()" [ngClass]="bookingService.bookingNotNull() && !bookingService.showed ? 'booked-small' : ''">menu</mat-icon>
+            <div class="flex-container flex-align-center phone-menu" [ngClass]="[menuOpen ? 'visible' : 'not-visible']">
+                <mat-icon (click)="closeMenu()">close</mat-icon>
+                <div (click)="menuOpen = false; onPageChange(0)" class="home left flex-container flex-column flex-justify-center flex-align-center" [ngClass]="animated[0] ? 'animated' : ''"><mat-icon>home</mat-icon><em class="uppercase">Home</em></div>
+                <div (click)="closeMenu()" class="flex-container flex-column flex-justify-center flex-align-center" *ngFor="let el of menuItems" [ngClass]="[animated[menuItems.indexOf(el) + 1] ? 'animated' : '', menuItems.indexOf(el) % 2 == 1 ? 'left' : 'right', el == 'Booking' && bookingService.bookingNotNull() && !bookingService.showed ? 'booked-phone' : '']" (click)="onPageChange(menuItems.indexOf(el) + 1)"><mat-icon>{{matIcons[menuItems.indexOf(el)]}}</mat-icon><em class="uppercase">{{ el }}</em></div>
+            </div>
+        </div>
+</header>

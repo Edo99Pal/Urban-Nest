@@ -1,0 +1,10 @@
+<div class="flex-container flex-justify-center flex-align-center carousel">
+    <div class="icon icon-left" (click)="onChange('back')"><mat-icon>keyboard_arrow_left</mat-icon></div>
+    <div class="icon icon-right" (click)="onChange('forward')"><mat-icon>keyboard_arrow_right</mat-icon></div>
+    <ng-content></ng-content>
+</div>
+<div class="controls">
+    <div class="flex-container index-container">
+        <div *ngFor="let item of items" class="index" [ngClass]="currentIndex == items.indexOf(item) + 1 ? 'active' : ''"></div>
+    </div>
+</div>

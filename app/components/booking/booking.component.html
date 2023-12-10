@@ -1,0 +1,110 @@
+<div class="container flex-container flex-justify-center flex-align-center color-white">
+    <h1 class="page-title">Booking</h1>
+    <div class="content flex-container flex-justify-space-between flex-align-center">
+        <div class="left">
+            <app-booking-form [deleted]="deleteSubject.asObservable()"/>
+        </div>
+        <div class="right flex-container flex-justify-center">
+            <div class="booking booking-empty color-white" *ngIf="!booking || booking == null">
+                <h2>Here is shown your booking</h2>
+            </div>
+            <div class="booking booking-card flex-container flex-column color-white" *ngIf="booking && !edit && booking">
+                <h2>Your Booking</h2>
+                <p class="uppercase">{{ this.booking.fullName }}</p>
+                <p class="uppercase">{{ this.booking.location }}</p>
+                <div class="flex-container flex-justify-space-between rooms">
+                    <div class="color-white">
+                        <p class="roomType">Room type: {{ this.booking.roomType }}</p>
+                    </div>
+                    <div  class="color-white">
+                        <p class="guests">{{ this.booking.nOfGuests }} <span *ngIf="this.booking.roomType == 'Dormitory Room'">guest<span *ngIf="booking.nOfGuests > 1">s</span></span><span *ngIf="this.booking.roomType != 'Dormitory Room'">room<span *ngIf="booking.nOfGuests > 1">s</span></span></p>
+                    </div>
+                </div>
+                <div class="flex-container flex-justify-space-between dates color-white">
+                    <div  class="color-white">
+                        <p class="startDate">From: {{ this.booking.startDate | date }}</p>
+                    </div>
+                    <div  class="color-white">
+                        <p class="endDate">To: {{ this.booking.endDate | date }}</p>
+                    </div>
+                </div>
+                <div class="flex-container flex-justify-space-between dates color-white">
+                    <p>Breakfast: {{ this.booking.breakfast ? 'Yes' : 'No' }}</p>
+                    <p [ngClass]="edited ? 'price' : ''">Total: {{ price.toFixed(2) }}€</p>
+                </div>
+                <div class="flex-container flex-justify-end buttons">
+                    <div class="button">
+                        <mat-icon (click)="onDelete()">delete</mat-icon>
+                    </div>
+                    <div class="button">
+                        <mat-icon (click)="edit = true">edit</mat-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="booking booking-card edit-booking flex-container flex-column flex-justify-center color-white" *ngIf="booking && edit">
+                <h2>Your Booking</h2>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Full Name</mat-label>
+                    <input matInput [(ngModel)]="booking.fullName" ngDefaultControl>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Location</mat-label>
+                    <mat-select [(ngModel)]="booking.location" >
+                        <mat-option *ngFor="let location of locations" value="{{ location.location }}" ngDefaultControl>
+                            {{ location.location }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Room</mat-label>
+                    <mat-select [(ngModel)]="booking.roomType">
+                        <mat-option *ngFor="let roomType of roomTypes" value="{{ roomType }}" ngDefaultControl>
+                            {{ roomType }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Guests</mat-label>
+                    <mat-select [(ngModel)]="booking.nOfGuests" >
+                        <mat-option *ngFor="let guest of guests" value="{{ guest }}" ngDefaultControl>
+                        {{ guest }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Start Date</mat-label>
+                    <input matInput [matDatepicker]="picker1" [(ngModel)]="booking.startDate" [min]="today" >
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1 ngDefaultControl></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>End Date</mat-label>
+                    <input matInput [matDatepicker]="picker2" [(ngModel)]="booking.endDate"  [min]="getAvailableEndDate()" >
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2 ngDefaultControl></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Do you want breakfast?</mat-label>
+                    <mat-select [(ngModel)]="booking.breakfast">
+                        <mat-option [value]="false" ngDefaultControl>
+                            No
+                        </mat-option>
+                        <mat-option [value]="true" ngDefaultControl>
+                            Yes
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <div class="flex-container flex-justify-end buttons">
+                    <div (click)="edit = false" class="button">
+                        <mat-icon (click)="onCancelEdit()">close</mat-icon>
+                    </div>
+                    <div class="button">
+                        <mat-icon (click)="onEdit()">check</mat-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

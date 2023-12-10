@@ -1,0 +1,127 @@
+@import 'src/scss/main';
+
+.container {
+    background-image: url(../../../assets/booking-bg.jpg);
+    background-color: rgba(0, 0, 0, .25);
+    padding: 10em 0 1em;
+    .content {
+        .left, .right {
+            width: 50%;
+        }
+        .booking {
+            width: 100%;
+            position: relative;
+            top: -20vh;
+            min-height: 30vh;
+            position: relative;
+            border: 3px solid white;
+            border-radius: 20px;
+            padding: 4em;
+            backdrop-filter: blur(5px);
+        }
+        .booking-empty {
+            h2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-45%, -50%);
+                width: 100%;
+            }
+        }
+        .booking-card {
+            h2 {
+                text-align: center;
+                display: inline-block;
+                padding-bottom: .5em;
+                border-bottom: 1px solid white;
+            }
+            .rooms, .dates {
+                width: 100%;
+            }
+            .uppercase {
+                text-transform: uppercase;
+                font-size: $light-font-weight;
+            }
+            .buttons {
+                .button {
+                    border: 1px solid white;
+                    padding: 3px 5px;
+                    border-radius: 5px;
+                    margin-left: 1em;
+                    &:hover, mat-icon:hover {
+                        background-color: white;
+                        color: $body-text-color;
+                    }
+                }
+            }
+            .price {
+                animation: 1s linear highlight;
+            }
+        }
+    }
+}
+
+@keyframes highlight {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+        font-weight: $bold-font-weight;
+    }
+
+    100% {
+        transform: scale(1);
+        font-weight: 300;
+    }
+}
+
+@media(max-width: 700px) {
+    .container {
+        .content {
+            .left, .right {
+                width: 100%;
+            }
+            .left {
+                position: relative;
+                left: 50%;
+                transform: translateX(-37.5%);
+                margin-bottom: 2em;
+            }
+            .edit-booking {
+                & > * {
+                    position: relative;
+                    left: -2em;
+                }
+                h2 {
+                    display: none;
+                }
+            }
+            .booking {
+                width: 80vw;
+                h2 {
+                    left: 40%;
+                    width: 60%;
+                    text-align: center;
+                }
+            }
+            .booking-card {
+                text-align: center;
+                h2 {
+                    margin: 0 auto 1em;
+                }
+                * {
+                    text-align: center;
+                    
+                }
+                .flex-justify-space-between {
+                    justify-content: center;
+                }
+                .buttons {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

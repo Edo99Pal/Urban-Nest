@@ -1,0 +1,238 @@
+// Flexbox Utility Classes
+.container {
+    width: 100vw;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+}
+
+.content {
+    min-height: 100vh;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-justify-space-between {
+    justify-content: space-between;
+}
+
+.flex-justify-space-around {
+    justify-content: space-around;
+}
+
+.flex-align-space-between {
+    align-items: space-between;
+}
+
+.flex-align-space-around {
+    align-items: space-around;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+
+.flex-justify-start {
+    justify-content: flex-start;
+}
+
+.flex-align-start {
+    align-items: flex-start;
+}
+
+.flex-justify-end {
+    justify-content: flex-end;
+}
+
+.flex-align-end {
+    align-items: flex-end;
+}
+
+.justify-self-center {
+    justify-self: center;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+// Text Alignment Utility Classes
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+// Table Utilities
+.table-center {
+    display: table;
+    width: 100%;
+    height: 100%;
+    * {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+// Margin and Padding Utility Classes
+.m-1 {
+    margin: .25rem;
+}
+
+.m-2 {
+    margin: .5rem;
+}
+
+.m-3 {
+    margin: 1rem;
+}
+
+.p-1 {
+    padding: .25rem;
+}
+
+.p-2 {
+    padding: .5rem;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+// Display Utilities
+.d-flex {
+    display: flex;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+// Visibility Utilities
+.visibility-hidden {
+    visibility: hidden;
+}
+
+.visibility-visible {
+    visibility: visible;
+}
+
+// Text Transform Utilities
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+// Font Weight Utilities
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.font-weight-normal {
+    font-weight: normal;
+}
+
+.font-weight-light {
+    font-weight: lighter;
+}
+
+// Text Color Utilities
+
+.text-primary {
+    color: $primary-color;
+}
+
+.text-success {
+    color: $success-color;
+}
+
+.text-danger {
+    color: $error-color;
+}
+
+.text-warning {
+    color: $warning-color;
+}
+
+.text-info {
+    color: $info-color;
+}
+
+// Background Color Utilities
+.bg-primary {
+    background-color: $primary-color;
+}
+
+.bg-success {
+    background-color: $success-color;
+}
+
+.bg-danger {
+    background-color: $error-color;
+}
+
+.bg-warning {
+    background-color: $warning-color;
+}
+
+.bg-info {
+    background-color: $info-color;
+}
+
+// Border Utilities
+.border {
+    border: 1px solid $background-color;
+}
+
+.border-top {
+    border-top: 1px solid $background-color;
+}
+
+.border-bottom {
+    border-bottom: 1px solid $background-color;
+}
+
+.border-left {
+    border-left: 1px solid $background-color;
+}
+
+.border-right {
+    border-right: 1px solid $background-color;
+}
