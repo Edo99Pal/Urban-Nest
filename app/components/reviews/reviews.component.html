@@ -1,0 +1,17 @@
+<div class="container flex-container flex-justify-center flex-align-center">
+    <h1 class="page-title">Reviews</h1>
+    <div class="content flex-container flex-justify-center flex-align-center flex-column">
+        <div class="review flex-container" *ngFor="let el of allReviews">
+            <div class="rating">
+                <mat-icon *ngFor="let star of rating[allReviews.indexOf(el)]">star</mat-icon>
+            </div>
+            <div class="top flex-container flex-justify-space-between">
+                <img src="assets/reviews/{{ el.imageurl }}"/>
+            </div>
+            <div class="bottom">
+                <p class="nickname">{{ el.nickname }}</p>
+                <em>"{{ el.review }}"</em>
+            </div>
+        </div>
+    </div>
+</div>

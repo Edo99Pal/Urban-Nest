@@ -1,0 +1,15 @@
+<div class="container flex-container flex-justify-center flex-align-center" [ngClass]="page ? 'bg-white' : ''">
+    <h1 class="section-title" [ngClass]="page ? 'page-h1' : 'color-white'">FAQ</h1>
+    <div class="content flex-container flex-justify-center flex-align-center flex-column">
+        <ul>
+            <li *ngFor="let el of faq">
+                <p class="question" [ngClass]="!page ? 'color-white' : ''">{{ faq.indexOf(el) + 1}}. {{ el.question }}</p>
+                <p class="answer" [ngClass]="!page ? 'color-white' : ''">{{ el.answer }}</p>
+            </li>
+        </ul>
+        <div *ngIf="page" class="text-center">
+            <p>Do you have other questions?</p>
+            <button mat-raised-button (click)="pageService.onPageChange(9)">Contact Us</button>
+        </div>
+    </div>
+</div>

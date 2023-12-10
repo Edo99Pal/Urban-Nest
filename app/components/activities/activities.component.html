@@ -1,0 +1,41 @@
+<div class="container flex-container flex-justify-center flex-align-center color-white">
+    <h1 class="page-title">Activities</h1>
+    <div class="content flex-container flex-column flex-justify-center flex-align-center">
+        <h2 class="big">Berlin</h2>
+        <h2>Outdoors Activities</h2>
+        <div class="activities flex-container flex-justify-center flex-align-center">
+            <app-activity *ngFor="let event of berlinEventsDay" (click)="pageService.onPageChange(berlinEventsDay.indexOf(event) + 14)" [activity]="event" [size]="'small'" [index]="berlinEventsDay.indexOf(event) + 1"/>
+        </div>
+        <h2>Night Activities</h2>
+        <div class="activities flex-container flex-justify-center flex-align-center">
+            <app-activity *ngFor="let event of berlinEventsNight" (click)="pageService.onPageChange(berlinEventsNight.indexOf(event) + 17)" [activity]="event" [size]="'small'" [index]="berlinEventsNight.indexOf(event) + 4"/>
+        </div>
+        <h2 class="big">Prague</h2>
+        <h2>Outdoors Activities</h2>
+        <div class="activities flex-container flex-justify-center flex-align-center">
+            <app-activity *ngFor="let event of pragueEventsDay" (click)="pageService.onPageChange(pragueEventsDay.indexOf(event) + 20)" [activity]="event" [size]="'small'" [index]="pragueEventsDay.indexOf(event) + 7"/>
+        </div>
+        <h2>Night Activities</h2>
+        <div class="activities flex-container flex-justify-center flex-align-center">
+            <app-activity *ngFor="let event of pragueEventsNight" (click)="pageService.onPageChange(pragueEventsNight.indexOf(event) + 23)" [activity]="event" [size]="'small'" [index]="pragueEventsNight.indexOf(event) + 10"/>
+        </div>
+        <h2 class="big">Vienna</h2>
+        <h2>Outdoors Activities</h2>
+        <div class="activities flex-container flex-justify-center flex-align-center">
+            <app-activity *ngFor="let event of viennaEventsDay" (click)="pageService.onPageChange(viennaEventsDay.indexOf(event) + 26)" [activity]="event" [size]="'small'" [index]="viennaEventsDay.indexOf(event) + 13"/>
+        </div>
+        <h2>Night Activities</h2>
+        <div class="activities flex-container flex-justify-center flex-align-center">
+            <app-activity *ngFor="let event of viennaEventsNight" (click)="pageService.onPageChange(viennaEventsNight.indexOf(event) + 29)" [activity]="event" [size]="'small'" [index]="viennaEventsNight.indexOf(event) + 16"/>
+        </div>
+        <h2 class="big">Budapest</h2>
+        <h2>Outdoors Activities</h2>
+        <div class="activities flex-container flex-justify-center flex-align-center">
+            <app-activity *ngFor="let event of budapestEventsDay" (click)="pageService.onPageChange(budapestEventsDay.indexOf(event) + 32)" [activity]="event" [size]="'small'" [index]="budapestEventsDay.indexOf(event) + 19"/>
+        </div>
+        <h2>Night Activities</h2>
+        <div class="activities flex-container flex-justify-center flex-align-center">
+            <app-activity *ngFor="let event of budapestEventsNight" (click)="pageService.onPageChange(budapestEventsNight.indexOf(event) + 35)" [activity]="event" [size]="'small'" [index]="budapestEventsNight.indexOf(event) + 22"/>
+        </div>
+    </div>
+</div>

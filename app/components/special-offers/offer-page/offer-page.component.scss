@@ -1,0 +1,41 @@
+@import 'src/scss/main';
+
+.container {
+    .content {
+        padding: 10em;
+        .offer {
+            background-color: white;
+            padding: 2em;
+            border-radius: 10px;
+            .description {
+                padding-bottom: .5em;
+                border-bottom: 1px solid black;
+            }
+            p {
+                margin-top: 1em;
+            }
+            .bottom > * {
+                margin: 0 1em;
+            }
+        }
+    }
+}
+.offer-1 {
+    background-image: url('../../../../assets/offers/offer-1.jpg');
+}
+.offer-2 {
+    background-image: url('../../../../assets/offers/offer-2.jpg');
+}
+.offer-3 {
+    background-image: url('../../../../assets/offers/offer-3.jpg');
+}
+.offer-4 {
+    background-image: url('../../../../assets/offers/offer-4.jpg');
+}
+
+@media(max-width: 700px) {
+    .bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}

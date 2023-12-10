@@ -1,0 +1,42 @@
+@import 'src/scss/main';
+
+.content {
+    align-items: stretch;
+    .city {
+        width: 50%;
+        background-size: cover;
+        .cover {
+            background-color: rgba(0, 0, 0, .25);
+            background-blend-mode: darken;
+            transition: all .3s;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, .25);
+                cursor: pointer;
+            }
+        }
+    }
+    .berlin {
+        background-image: url('../../../../assets/cities/berlin.jpg');
+    }
+    .prague {
+        background-image: url('../../../../assets/cities/prague.jpg');
+    }
+    .vienna {
+        background-image: url('../../../../assets/cities/vienna.jpg');
+    }
+    .budapest {
+        background-image: url('../../../../assets/cities/budapest.jpg');
+    }
+}
+
+@media(max-width: 700px) {
+    .content {
+        align-items: normal;
+        .city {
+            width: 100%;
+            height: 50vh;
+        }
+
+    }
+}

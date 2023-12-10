@@ -1,0 +1,20 @@
+<div class="container flex-container flex-justify-center flex-align-center offer-{{ service.getSpecialOffers.indexOf(offer) + 1}}">
+    <div class="content flex-container flex-justify-center flex-align-center">
+        <div class="offer">
+            <h1>{{ offer.offerTitle }}</h1>
+            <h2>{{ offer.city }}</h2>
+            <div class="description">
+                <em>{{ offer.description }}</em>
+            </div>
+            <p>{{ offer.info }}</p>
+            <div class="bottom flex-container flex-justify-end">
+                <div>
+                    <h2>Valid Until: {{ offer.validUntil }}</h2>
+                </div>
+                <div>
+                    <h2>{{ offer.discountPercentage}}% off</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

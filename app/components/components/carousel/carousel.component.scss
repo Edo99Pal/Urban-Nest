@@ -1,0 +1,57 @@
+.icon {
+    background-color: white;
+    border-radius: 50%;
+    &:hover {
+        background-color: #333;
+        cursor: pointer;
+        mat-icon {
+            color: white;
+        }
+    }
+    mat-icon {
+        padding: .5em;
+        color: black;
+        position: relative;
+    }
+}
+.icon-left {
+    position: absolute;
+    top: 400px;
+    right: 45vw;
+    z-index: 1000;
+}
+.icon-right {
+    position: absolute;
+    top: 400px;
+    left: 45vw;
+    z-index: 100;
+}
+.index-container {
+    display: flex;
+    width: 10em;
+    position: absolute;
+    bottom: 5em;
+    .index {
+        width: 5px;
+        height: 5px;
+        margin: 5px;
+        background-color: rgba(255, 255, 255, .25);
+        border-radius: 50%;
+        transition: all 1s;
+    }
+    .active {
+        background-color: white;
+    }
+}
+
+@media(max-width: 700px) {
+    .icon {
+        background-color: transparent;
+        &:hover {
+            background-color: transparent;
+        }
+        mat-icon {
+            color: white;
+        }
+    }
+}

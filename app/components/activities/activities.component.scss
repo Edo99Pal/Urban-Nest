@@ -1,0 +1,24 @@
+@import 'src/scss/main';
+
+.container {
+    background: linear-gradient(to bottom, #3498db, #1a5276);
+    background-attachment: fixed;
+    padding: 10em;
+    .content {
+        width: 80vw;
+        .big {
+            font-size: $extra-large-font-size;
+        }
+        .activities {
+            margin-bottom: 2em;
+        }
+    }
+}
+
+@media(max-width: 700px) {
+    app-activity {
+        position: relative;
+        left: -50%;
+        transform: translateX(37.5%);
+    }
+}

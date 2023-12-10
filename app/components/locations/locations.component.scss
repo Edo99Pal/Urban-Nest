@@ -1,0 +1,29 @@
+@import 'src/scss/main';
+
+.container {
+    background: linear-gradient(to right, #C0C0C0, #DCDCDC);
+    color: white;
+    .content {
+        position: relative;
+        app-locations-home {
+            position: absolute;
+            left: 0;
+            top: 10vh;
+            width: 100vw;
+            transition: all 1s;
+        }
+    }
+}
+
+
+
+@media(max-width: 700px) {
+    .container {
+        .content {
+            app-location {
+                left: -30vw;
+                width: 60vw;
+            }
+        }
+    }
+}

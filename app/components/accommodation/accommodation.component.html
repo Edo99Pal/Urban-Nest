@@ -1,0 +1,12 @@
+<div class="container flex-container flex-justify-center flex-align-center color-white">
+    <h1 class="page-title">Accomodation</h1>
+    <div class="content flex-container">
+        <div class="accommodation color-white" *ngFor="let room of accomodations">
+            <h2>{{ room.type }}</h2>
+            <p><span>Type:</span> {{ room.type }}</p>
+            <p><span>Description:</span> {{ room.description }}</p>
+            <p><span>Beds:</span> {{ room.beds }}</p>
+            <p><span>Availability:</span> {{ room.availability }} rooms available</p>
+        </div>
+    </div>
+</div>

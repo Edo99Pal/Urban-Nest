@@ -1,0 +1,113 @@
+@import 'src/scss/main';
+
+.container {
+    position: relative;
+    padding: 10em 5em 3em;
+    background-image: url('../../../../assets/homepage/bg-facilities.jpg');
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    .home-h1 {
+        padding-top: .75em;
+    }
+    .content {
+        color: black;
+        width: 100vw;
+        padding: 3em;
+        background-color: white;
+        .facility {
+            align-self: flex-start;
+            width: 30%;
+            h3 {
+                font-weight: 100;
+            }
+            h2, .categories {
+                border-bottom: 2px solid white;
+                margin-bottom: 1em;
+            }
+            .categories {
+                justify-self: flex-start;
+                min-height: 250px;
+                .detail {
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    p {
+                        width: 80%;
+                        border-bottom: 1px solid black;
+                    }
+                    mat-icon {
+                        position: absolute;
+                        top: 0;
+                    }
+                }
+                
+                &:nth-child(even) {
+                    .detail {
+                        justify-content: flex-start;
+                    }
+                }
+            }
+            .categories:nth-child(odd) {
+                text-align: right;
+                mat-icon {
+                    left: 1em;
+                }
+                .pool-table-1 {
+                    left: 1.9em;
+                }
+                .pool-table-2 {
+                    left: 2.8em;
+                }
+            }
+            .categories:nth-child(even) {
+                text-align: left;
+                mat-icon {
+                    right: 1em;
+                }
+            }        
+        }
+    }
+}
+
+.bg-clear {
+    background-color: transparent;
+}
+
+@media(max-width: 700px) {
+    .container {
+        padding: 10em 1em 3em;
+        .content {
+            .facility {
+                width: 90%;
+                .categories {
+                    .detail {
+                        mat-icon {
+                            top: 50%;
+                            transform: translateY(-100%);
+                        }
+
+                    }
+                }
+                .categories:nth-child(odd) {
+                    text-align: right;
+                    mat-icon {
+                        left: 0;
+                    }
+                    .pool-table-1 {
+                        left: 20px;
+                    }
+                    .pool-table-2 {
+                        left: 40px;
+                    }
+                }
+                .categories:nth-child(even) {
+                    text-align: left;
+                    mat-icon {
+                        right: 0;
+                    }
+                }     
+            }
+        }
+    }
+}

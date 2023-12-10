@@ -1,0 +1,92 @@
+@import 'src/scss/main';
+
+.container {
+    padding: 10em;
+    .content {
+        background-color: white;
+        padding: 2em;
+        .description {
+            .first-p {
+                margin-bottom: 2em;
+            }
+        }
+        .info {
+            mat-icon {
+                position: relative;
+                top: .25em;
+            }
+        }
+    }
+}
+.event-1 {
+    background-image: url('../../../../assets/activities/activity-1.jpg');
+}
+.event-2 {
+    background-image: url('../../../../assets/activities/activity-2.jpg');
+}
+.event-3 {
+    background-image: url('../../../../assets/activities/activity-3.jpg');
+}
+.event-4 {
+    background-image: url('../../../../assets/activities/event-berlin-1.jpg');
+}
+.event-5 {
+    background-image: url('../../../../assets/activities/event-berlin-2.jpg');
+}
+.event-6 {
+    background-image: url('../../../../assets/activities/event-berlin-3.jpg');
+}
+.event-7 {
+    background-image: url('../../../../assets/activities/activity-4.jpg');
+}
+.event-8 {
+    background-image: url('../../../../assets/activities/activity-5.jpg');
+}
+.event-9 {
+    background-image: url('../../../../assets/activities/activity-6.jpg');
+}
+.event-10 {
+    background-image: url('../../../../assets/activities/event-prague-1.jpg');
+}
+.event-11 {
+    background-image: url('../../../../assets/activities/event-prague-2.jpg');
+}
+.event-12 {
+    background-image: url('../../../../assets/activities/event-prague-3.jpg');
+}
+.event-13 {
+    background-image: url('../../../../assets/activities/activity-7.jpg');
+}
+.event-14 {
+    background-image: url('../../../../assets/activities/activity-8.jpg');
+}
+.event-15 {
+    background-image: url('../../../../assets/activities/activity-9.jpg');
+}
+.event-16 {
+    background-image: url('../../../../assets/activities/event-vienna-1.jpg');
+}
+.event-17 {
+    background-image: url('../../../../assets/activities/event-vienna-2.jpg');
+}
+.event-18 {
+    background-image: url('../../../../assets/activities/event-vienna-3.jpg');
+}
+.event-19 {
+    background-image: url('../../../../assets/activities/activity-10.jpg');
+}
+.event-20 {
+    background-image: url('../../../../assets/activities/activity-11.jpg');
+}
+.event-21 {
+    background-image: url('../../../../assets/activities/activity-12.jpg');
+}
+.event-22 {
+    background-image: url('../../../../assets/activities/event-budapest-1.jpg');
+}
+.event-23 {
+    background-image: url('../../../../assets/activities/event-budapest-2.jpg');
+}
+.event-24 {
+    background-image: url('../../../../assets/activities/event-budapest-3.jpg');
+}

@@ -1,0 +1,13 @@
+<div class="container flex-container flex-justify-center flex-align-center color-white">
+    <h1 class="section-title">Accommodation</h1>
+    <div class="content flex-container flex-justify-center flex-align-center">
+        <div class="accommodation flex-container flex-justify-space-around flex-align-center">
+            <div class="room" *ngFor="let room of rooms">
+                <h2>{{ room.type}}</h2>
+                <em>{{ room.beds }}</em>
+                <p>{{ room.description }}</p>
+                <em class="availability">x{{ room.availability }}<mat-icon> hotel</mat-icon></em>
+            </div>
+        </div>
+    </div>
+</div>

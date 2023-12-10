@@ -1,0 +1,14 @@
+<div class="container flex-container flex-justify-center flex-align-center" [ngClass]="page ? 'bg-white' : ''">
+    <h1 class="section-title" [ngClass]="page ? 'page-h1' : 'color-white'">Contact Us</h1>
+    <div class="content flex-container flex-justify-center flex-align-center flex-column">
+        <ul class="flex-container flex-justify-space-around">
+            <li *ngFor="let el of contactInfo">
+                <h2>{{ el.city }}</h2>
+                <p><b>Email:</b> {{ el.email}}</p>
+                <p><b>Phone:</b> {{ el.phoneNumber }} </p>
+                <p><b>Address:</b> {{ el.address }}</p>
+            </li>
+        </ul>
+        <h3>Operating hours: {{ contactInfo[0].operatingHours }}</h3>
+    </div>
+</div>

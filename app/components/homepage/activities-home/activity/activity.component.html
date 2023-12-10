@@ -1,0 +1,5 @@
+<div class="event event-{{ index }} flex-container flex-justify-space-between flex-align-center color-white" [ngClass]="size == 'small' ? 'small' : ''">
+    <h2 id="title">{{ activity.title }}</h2>
+    <h2 id="location">{{ activity.location }}</h2>
+    <p id="date" class="color-white"><mat-icon>today</mat-icon> {{ activity.date.weekDay }} {{ activity.date.month }}-{{ activity.date.day }} {{ activity.date.hour }}:{{ activity.date.minutes }}</p>
+</div>
