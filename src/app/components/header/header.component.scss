@@ -1,0 +1,148 @@
+@import 'src/scss/main';
+
+header {
+    min-height: 10vh;
+    background-color: $header-background-color;
+    text-transform: uppercase;
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    padding: 1em;
+    z-index: 1000;
+    #logo {
+        margin: 0;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .booked {
+        position: relative;
+        &::after {
+            content: '+1';
+            padding: 1px 3px;
+            background-color: orange;
+            color: white;
+            font-size: .5em;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: -1em;
+
+        }
+    }
+
+    .booked-small {
+        position: relative;
+        &::after {
+            content: '';
+            padding: 1px;
+            width: 1em;
+            height: 1em;
+            background-color: orange;
+            color: white;
+            font-size: .5em;
+            border-radius: 50%;
+            position: absolute;
+            top: .2em;
+            right: .2em;
+
+        }
+    }
+    .booked-phone {
+        position: relative;
+        &::after {
+            content: '+1';
+            padding: .5em;
+            background-color: orange;
+            color: white;
+            font-size: 1rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 2em;
+            right: 3em;
+
+        }
+    }
+
+    .navbar {
+        position: absolute;
+        right: 1em;
+        ul {
+            li {                
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .navbar-phone {
+        display: none;
+    }
+}
+
+@media(max-width: 1300px) {
+    header {
+        .navbar {
+            display: none;
+        }
+        .navbar-phone {
+            display: block;
+            cursor: pointer;
+            mat-icon {
+                font-size: 1.5em;
+            }
+            .bg-white {
+                background-color: white;
+            }
+            .visible {
+                display: flex;
+                min-height: 100vh;
+                min-width: 100vw;
+                position: absolute;
+                top: 0; 
+                left: 0;
+                color: $body-text-color;
+                & > mat-icon {
+                    position: absolute;
+                    top: 1em;
+                    right: 1em;
+                    z-index: 1000;
+                }
+                & > *:not(mat-icon) {
+                    background-color: white;
+                    width: 50%;
+                    height: 20vh;
+                    border: 1px solid white;
+
+                }
+                & > .left {
+                    position: relative;
+                    left: -1000px;
+                    transition: all .1s;
+                }
+                & > .right {
+                    position: relative;
+                    right: -1000px;
+                    transition: all .1s;
+                }
+                @for $i from 1 through 11 {
+                    & > .left.animated:nth-child(#{$i}) {
+                        transition-delay: .05s * ($i) * 2; 
+                        left: 0;                       
+                    }
+                }
+                @for $i from 1 through 11 {
+                    & > .right.animated:nth-child(#{$i}) {
+                        transition-delay: .05s * (($i) * 2 + 1); 
+                        right: 0;                       
+                    }
+                }
+            }
+            .not-visible {
+                display: none;
+            }
+        }
+    }
+}
